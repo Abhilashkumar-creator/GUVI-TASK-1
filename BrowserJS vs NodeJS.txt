@@ -1,0 +1,6 @@
+Five Differences between Browser Js and Node JS:
+1)Browser JS uses DOM                   		1)Node JS dont uses DOM
+2)Browser JS is not headless            		2)Node JS is headless
+3)Browser JS processes response objects   		3)Node JS processes request objects
+4)Browser JS dont have "require" predefined		4)Node JS "require" is predefined
+5)Moduling is not mandatory in client side Browser JS   5)In Node everything is a module. You must keep your code inside a module.
