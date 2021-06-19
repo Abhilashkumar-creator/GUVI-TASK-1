@@ -1,0 +1,14 @@
+The typeof operator returns a string indicating the type of the unevaluated operand.
+1)typeof(1):As typeof operator is followed by operand "1" it returns "number" as output.
+2)typeof(1.1):As typeof operator is followed by operand  "1.1" it returns "number" as output.
+3)typeof('1.1'):As typeof operator is followed by operand  " '1.1' " it returns "string" as output.
+4)typeof(true):As typeof operator is followed by operand  true it returns "boolean" as output.
+5)typeof(null):As typeof operator is followed by operand  null it returns "object" as output.
+6)typeof(undefined):As typeof operator is followed by operand  undefined it returns "undefined" as output.
+7)typeof([]):As typeof operator is followed by operand  [] it returns "object" as output.
+8)typeof({}):As typeof operator is followed by operand  {} it returns "object" as output.
+9)typeof(NaN):As typeof operator is followed by operand NaN it returns "Number" as output.
+
+
+
+
