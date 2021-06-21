@@ -1,0 +1,131 @@
+TASK 1: Do the below programs in anonymous function & IIFE
+
+
+1)Print odd numbers in an array using anonymous function
+  var M=function(N){
+  for(i=1; i<=N; i++)
+   {
+    if(i % 2 === 1)
+     {
+        console.log(i);
+     }
+   }
+  }
+  M(16)
+
+2)Convert all the strings to title caps in a string array
+        (function(){
+         console.log("guvi geek".toUpperCase());
+        })()
+
+3)Sum of all numbers in an array
+         function foo(n){
+         console.log((n*(n+1))/2)
+         }
+         foo(2)
+
+4)Return all the prime number in an array
+function checkprime(arr) {
+  const n = arr;
+  for (let i = 0; i <=n; i++){
+  if (n % 2 === 0) 
+  {
+      return true
+    }
+  else 
+  {
+      return false; 
+   }
+  }
+}
+console.log(checkprime(3));
+
+5)Return all the palindroms in an array
+ function checkPalindrome(arr) {
+  const len = arr.length;
+  if (len % 2 === 0) return false;
+
+  for (let i = 0; i < len / 2; i++) {
+    if (arr[i] !== arr[len - i - 1]) return false;
+  }
+  return true;
+}
+console.log(checkPalindrome([1, 3, 5, 3, 1]));
+
+
+6)Return median of two sorted arrays of same size 
+function getMedian(ar1, ar2, n)
+{
+	var i = 0; 
+	var j = 0; 
+	var count;
+	var m1 = -1, m2 = -1;
+	for (count = 0; count <= n; count++)
+	{
+		if (i == n)
+		{
+			m1 = m2;
+			m2 = ar2[0];
+			break;
+		}
+		else if (j == n)
+		{
+			m1 = m2;
+			m2 = ar1[0];
+			break;
+		}
+		if (ar1[i] <= ar2[j])
+		{
+			m1 = m2; 
+			m2 = ar1[i];
+			i++;
+		}
+		else
+		{
+			m1 = m2; 
+			m2 = ar2[j];
+			j++;
+		}
+	}
+
+	return (m1 + m2)/2;
+}
+
+var ar1 = [1, 12, 15, 26, 35];
+var ar2 = [2, 13, 16, 27,36];
+var n1 = ar1.length;
+var n2 = ar2.length;
+if (n1 == n2)
+	console.log( getMedian(ar1, ar2, n1));
+
+7)Remove duplicates from an array
+function removeDuplicates(arr, n)
+{
+    if (n===0 || n==1)
+    return n;
+    var temp = new Array(n);
+    var j = 0;
+    for (var i=0; i<n-1; i++)
+        if (arr[i] != arr[i+1])
+        temp[j++] = arr[i];
+        temp[j++] = arr[n-1];
+    for (i=0; i<j; i++)
+        arr[i] = temp[i];
+     return j;
+}
+var arr = [1, 2, 2, 3, 4, 4, 4, 5, 5];
+    var n = arr.length;
+    n = removeDuplicates(arr, n);
+    for (var i=0; i<n; i++)
+       console.log( arr[i]+" ");
+        
+8)Rotate an array by k times
+function arrayRotate(arr, count) {
+  count -= arr.length * Math.floor(count / arr.length);
+  arr.push.apply(arr, arr.splice(0, count));
+  return arr;
+}
+for(let i = 0 ; i <= 6 ; i++) {
+  console.log(arrayRotate(["1","2","3","4","5"], i));
+}
+ 

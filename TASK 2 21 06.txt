@@ -1,0 +1,50 @@
+TASK 3:Do the below programs in arrow functions
+
+1)Print odd numbers in an array 
+var M=(N)=>{
+  for(i=1; i<=N; i++)
+   {
+    if(i % 2 === 1)
+     {
+        console.log(i);
+     }
+   }
+  }
+  M(16)
+
+2)Convert all the strings to title caps in a string array
+(()=>{
+         console.log("guvi geek".toUpperCase());
+        })()
+
+3)Sum of all numbers in an array
+((n)=>{
+         console.log((n*(n+1))/2)
+         }
+         )(2)
+
+4)Return all the prime numbers in an array
+((arr)=>{
+  const n = arr;
+  for (let i = 0; i <=n; i++){
+  if (n % 2 === 0) 
+  {
+      return true
+    }
+  else 
+  {
+      return false; 
+   }
+  }
+})
+
+5)Return all the palindromes in an array
+((arr)=> {
+  const len = arr.length;
+  if (len % 2 === 0) return false;
+
+  for (let i = 0; i < len / 2; i++) {
+    if (arr[i] !== arr[len - i - 1]) return false;
+  }
+  return true;
+})
